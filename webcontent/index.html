@@ -1,0 +1,517 @@
+<!--  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Learn with Integrity</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
+
+    .all {
+        background-color: rgba(11, 11, 43, 0.925);
+        color: white;
+    }
+
+    .titleback {
+        background-color: rgba(11, 11, 43, 0.925);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .title h1 {
+        font-family: cursive;
+        font-weight: 2px;
+        margin-left: 20px;
+    }
+
+    button {
+        background-color: white;
+        color: black;
+        border: 2px solid purple;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-family: cursive;
+        font-weight: bold;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .hover-box {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 15px;
+    }
+
+    .hover-box:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.02);
+    }
+
+    .contents {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 40px 20px;
+        position: relative;
+    }
+
+    .divider {
+        width: 0;
+        height: 300px;
+        border-left: 3px dotted #ccc;
+        margin: 0 15px;
+    }
+
+    .fade-section {
+        background-color: azure;
+        color: rgb(12, 12, 88);
+        width: 400px;
+        padding: 20px;
+        border-radius: 10px;
+        opacity: 0;
+        animation: fadeInUp 1.8s ease-out forwards;
+        transform: translateY(30px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .fade-section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .img-container {
+        opacity: 0;
+        animation: fadeFromSide 1.8s ease-out forwards;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-left {
+        animation-name: fadeInLeft;
+    }
+
+    .img-right {
+        animation-name: fadeInRight;
+    }
+
+    img {
+        height: 300px;
+        width: 400px;
+        border-radius: 25px;
+        display: block;
+        margin-bottom: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .img-container:hover img {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    .footer {
+        background-color: rgba(11, 11, 43, 0.925);
+        text-decoration: none;
+        color: aqua;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .footer a {
+        color: aqua;
+    }
+    /* Logo inside header title */
+.logo {
+    height: 45px;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+/* Small logo inside nav */
+.nav-logo {
+    height: 22px;
+    margin-right: 6px;
+}
+/* Logo + Title alignment */
+.title {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* space between logo and text */
+}
+
+.title .logo {
+    height: 50px;   /* adjust size */
+    width: auto;
+}
+
+    
+
+    /* Animations */
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInLeft {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        from {
+            transform: translateX(-50px);
+        }
+    }
+
+    @keyframes fadeInRight {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        from {
+            transform: translateX(50px);
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="all">
+        <!-- Title b
+        <div class="titleback">
+            <div class="title">
+            <img src="images/LWI_transparent.png" alt="LWI Logo" class="nav-logo">
+                <h1>Learn With Integrity</h1>
+            </div>
+            <div>
+                <a href="login.jsp"><button>Login</button></a>
+                <a href="register.jsp"><button>Sign Up</button></a>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- WHO WE ARE section 
+        <div class="hover-box">
+            <div class="contents">
+                <div class="fade-section">
+                    <h2 style="color:black; font-family: cursive;"><b>Who We Are</b></h2>
+                    <p>We are passionate Computer Science students driven by a vision to create an innovative and inspiring learning platform.
+                    <br>With a deep interest in technology and education, we aim to build a powerful web-based system where knowledge is shared, honesty is valued, and learning becomes a rewarding journey for everyone!</p>
+                </div>
+                <div class="divider"></div>
+                <div class="img-container img-right">
+                    <img src="images/who we are.png" alt="Who We Are Image">
+                    <p style="text-align: center;"><b>Students of TCA</b></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- WHAT WE DO section --
+        <div class="hover-box">
+            <div class="contents">
+                <div class="img-container img-left">
+                    <img src="images/what we do.png" alt="What We Do Image">
+                    <p style="text-align: center;"><b>Our LMS Portal - LWI!</b></p>
+                </div>
+                <div class="divider"></div>
+                <div class="fade-section">
+                    <h2 style="color:black; font-family: cursive;"><b>What We Do</b></h2>
+                    <p>We provide a free, AI-powered Learning Management System (LMS) designed for students, aspirants, and professionals to learn, practice, and test their knowledge with confidence and integrity.
+                    <br>Our platform ensures a secure learning environment with smart features like note validation, quiz monitoring, and gamified rewards — making learning not just honest, but also fun and meaningful.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer --
+        <div class="footer">
+            <h2>Contact us: 📩 <a href="mailto:learnwithintegrity@gmail.com">learnwithintegrity@gmail.com</a></h2>
+        </div>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Learn With Integrity</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
+
+    .all {
+        background-color: rgba(11, 11, 43, 0.925);
+        color: white;
+    }
+
+    /* Header (Logo + Title + Buttons) */
+    .titleback {
+        background-color: rgba(11, 11, 43, 0.925);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 30px;
+    }
+
+    /* Align logo and title */
+    .title {
+    display: flex;
+    align-items: center;   /* ensures vertical centering */
+    gap: 15px;
+    line-height: 1;             /* spacing between logo and text */
+}
+    
+
+    .title .logo {
+   height: 75px;          /* larger than before */
+    width: 200px;
+    display: block;
+}
+
+    .title h1 {
+        font-family: cursive;
+        font-weight: normal;
+        margin: 0;
+        font-size: 2rem;
+    }
+    
+    
+
+    /* Buttons */
+   button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid aqua;
+
+      
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 18px;
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-family: cursive;
+        font-weight: bold;
+    }
+    button:hover {
+    background-color: aqua;
+    color: black;
+}
+    
+
+    a {
+        text-decoration: none;
+    }
+
+    /* Hover box */
+    .hover-box {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 15px;
+    }
+
+    .hover-box:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Section contents */
+    .contents {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 40px 20px;
+        position: relative;
+    }
+
+    .divider {
+    width: 0;
+    min-height: 250px;
+    border-left: 3px dotted #ccc;
+    margin: 0 15px;
+}
+
+    /* Fade section card */
+    .fade-section {
+    background-color: #f9ffff; /* lighter than azure */
+    color: #0b0b2b;           /* dark navy */
+
+
+        width: 400px;
+        padding: 20px;
+        border-radius: 10px;
+        opacity: 0;
+        animation: fadeInUp 1.8s ease-out forwards;
+        transform: translateY(30px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .fade-section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Image container */
+    .img-container {
+        opacity: 0;
+        animation: fadeFromSide 1.8s ease-out forwards;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-left {
+    animation: fadeInLeft 1.8s ease-out forwards;
+}
+.img-right {
+    animation: fadeInRight 1.8s ease-out forwards;
+}
+
+
+    .img-container img {
+        height: 300px;
+        width: 400px;
+        border-radius: 25px;
+        display: block;
+        margin-bottom: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .img-container:hover img {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    /* Footer */
+    .footer {
+        background-color: rgba(11, 11, 43, 0.925);
+        text-decoration: none;
+        color: aqua;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .footer a {
+        color: aqua;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInLeft {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        from {
+            transform: translateX(-50px);
+        }
+    }
+
+    @keyframes fadeInRight {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        from {
+            transform: translateX(50px);
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="all">
+        <!-- Header -->
+        <div class="titleback">
+            <div class="title">
+                <img src="images/LWI_transparent.png" alt="LWI Logo" class="logo">
+                <h1>Learn With Integrity</h1>
+            </div>
+            <div>
+                <a href="login.jsp"><button>Login</button></a>
+                <a href="register.jsp"><button>Sign Up</button></a>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- WHO WE ARE section -->
+        <div class="hover-box">
+            <div class="contents">
+                <div class="fade-section">
+                    <h2 style="color:black; font-family: cursive;"><b>Who We Are</b></h2>
+                    <p>We are passionate Computer Science students driven by a vision to create an innovative and inspiring learning platform.
+                    <br>With a deep interest in technology and education, we aim to build a powerful web-based system where knowledge is shared, honesty is valued, and learning becomes a rewarding journey for everyone!</p>
+                </div>
+                <div class="divider"></div>
+                <div class="img-container img-right">
+                    <img src="images/who we are.png" alt="Who We Are Image">
+                    <p style="text-align: center;"><b>Students of TCA</b></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- WHAT WE DO section -->
+        <div class="hover-box">
+            <div class="contents">
+                <div class="img-container img-left">
+                    <img src="images/what we do.png" alt="What We Do Image">
+                    <p style="text-align: center;"><b>Our LMS Portal - LWI!</b></p>
+                </div>
+                <div class="divider"></div>
+                <div class="fade-section">
+                    <h2 style="color:black; font-family: cursive;"><b>What We Do</b></h2>
+                    <p><p>We provide a free Learning Management System (LMS) designed for students, aspirants, and professionals to learn, practice, and test their knowledge with confidence and integrity.
+<br>Our platform ensures a secure learning environment with features like quiz monitoring, level-based assessments, and progress tracking — making learning not just honest, but also meaningful and engaging.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <h2>Contact us: 📩 <a href="mailto:learnwithintegrity@gmail.com">learnwithintegrity@gmail.com</a></h2>
+        </div>
+    </div>
+</body>
+</html>
+
